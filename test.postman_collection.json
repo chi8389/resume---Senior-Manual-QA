@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "07ca2912-c1c8-43da-b3fd-d5d42a3b1ec6",
+		"name": "Exercise 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37113242"
+	},
+	"item": [
+		{
+			"name": "Complex Data Structures",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"console.log(response[0].Item01.Data[0].Results[0].Contact.Address.PostalCode);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cde8bdc4bb9d45de9b1fff00c4118687.api.mockbin.io/",
+					"protocol": "https",
+					"host": [
+						"cde8bdc4bb9d45de9b1fff00c4118687",
+						"api",
+						"mockbin",
+						"io"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "https://backend-cef.filabra.com/gateway/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "b8729f01-29cc-463b-a102-03de66338233"
+					},
+					{
+						"key": "secretKey",
+						"value": "JrmOUnNYJgDVi9LPGL8cq8waHNqHDHUyFB8eSQJk"
+					}
+				],
+				"url": {
+					"raw": "https://backend-cef.filabra.com/gateway/",
+					"protocol": "https",
+					"host": [
+						"backend-cef",
+						"filabra",
+						"com"
+					],
+					"path": [
+						"gateway",
+						""
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url \"https://backend-cef.filabra.com/gateway/\" \\\r\n  --header \"accessKey: b8729f01-29cc-463b-a102-03de66338233\" \\\r\n  --header \"secretKey: JrmOUnNYJgDVi9LPGL8cq8waHNqHDHUyFB8eSQJk\"\r\n"
+			},
+			"response": []
+		}
+	]
+}
